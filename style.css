@@ -1,0 +1,188 @@
+
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background-color: #e3d1ca;
+    color: #0d0c0c;
+    text-align: center;
+    
+    
+}
+.todo-container {
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: #eadbd5;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(70, 45, 45, 0.08);
+}
+
+h1 {
+    background-color: none;
+    color: #d26774;
+    margin-bottom: 15px;
+    border-radius: 5px; 
+    padding: 10px;
+}
+
+p {
+    color: #533f3f;
+    margin-bottom: 25px;
+    font-size: large;
+}
+
+/* Sun and moon button */
+#theme-btn {
+    background: none;
+    border: 2px solid rgb(204, 72, 94);
+    border-radius: 15px;
+    padding: 0;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#todo-input {
+    width: 350px;
+    max-width: 70%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#add-btn {
+    padding: 12px 20px;
+    margin-left: 5px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+#todo-list {
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 0;
+    list-style: none;
+}
+
+#todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    text-align: left;
+}
+
+#todo-list input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#todo-list li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+/* Delete button */
+#todo-list li button {
+    padding: 7px 12px;
+    color: rgb(207, 95, 95);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+#todo-list li button:hover {
+    background-color: #785a5a;
+}
+
+#todo-list li input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#todo-list li button {
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+
+/* Dark mode */
+.dark-mode {
+    background-color: #151130;
+    color: white;
+}
+
+.dark-mode .todo-container {
+    background-color: #1d1938;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode h1 {
+    color: #b6f1f1;
+  
+}
+
+.dark-mode p {
+    color: #ccc;
+}
+
+.dark-mode #todo-input {
+    background-color: #151130a6;
+    color: rgb(225, 170, 170);
+    border-color: #555;
+}
+
+.dark-mode #todo-list li {
+    background-color: #365d7d;
+}
+
+.dark-mode #theme-btn {
+    background: none;
+    color: rgb(201, 119, 119);
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    #todo-input {
+        width: calc(100% - 85px);
+        max-width: none;
+    }
+
+    #add-btn {
+        padding: 12px 14px;
+    }
+
+    #todo-list li {
+        gap: 7px;
+        padding: 10px;
+    }
+}
